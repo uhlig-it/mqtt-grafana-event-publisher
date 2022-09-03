@@ -18,9 +18,9 @@ import (
 var opts struct {
 	Verbose      bool     `short:"v" long:"verbose" description:"Print verbose information"`
 	MqttClientID string   `short:"c" long:"client-id" description:"client id to use for the MQTT connection"`
-	MqttURL      string   `short:"m" long:"mqtt-url"  description:"URL of the MQTT broker" env:"MQTT_URL" required:"yes"`
-	GrafanaURL   string   `short:"g" long:"grafana-url" description:"URL of the MQTT broker" env:"GRAFANA_URL" required:"yes"`
-	Tag          []string `short:"t" long:"tag" description:"tag to add to the Grafana annotation"`
+	MqttURL      string   `short:"m" long:"mqtt-url"  description:"URL of the MQTT broker incl. username and password" env:"MQTT_URL" required:"yes"`
+	GrafanaURL   string   `short:"g" long:"grafana-url" description:"URL of the Grafana server incl. username and password" env:"GRAFANA_URL" required:"yes"`
+	Tag          []string `short:"t" long:"tag" description:"tag to add to the Grafana annotation (repeat for multiple tags)"`
 }
 
 func main() {
